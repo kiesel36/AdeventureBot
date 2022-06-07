@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Z8JUOXIEeySd_1a9cY6jA" name="AdventureBot">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_3l6IwOXIEeySd_1a9cY6jA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_3efSIOXIEeySd_1a9cY6jA" name="Activity1"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Nx5tAOXNEeySd_1a9cY6jA" name="GameExecuter">
+    <packagedElement xmi:type="uml:Actor" xmi:id="_XgLJIOXNEeySd_1a9cY6jA" name="Player"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_e6WbsOXNEeySd_1a9cY6jA" name="PlayerStartGame">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_plE5AOXNEeySd_1a9cY6jA" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_0F7ooOXNEeySd_1a9cY6jA" name="ExtensionPoint2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_kCFKgOXNEeySd_1a9cY6jA" name="PlayerCreateCharacter">
+      <extend xmi:type="uml:Extend" xmi:id="_plAnkOXNEeySd_1a9cY6jA" extendedCase="_e6WbsOXNEeySd_1a9cY6jA" extensionLocation="_plE5AOXNEeySd_1a9cY6jA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_tN1IYOXNEeySd_1a9cY6jA" name="PlayerChooseMatchfield">
+      <extend xmi:type="uml:Extend" xmi:id="_0F7BkOXNEeySd_1a9cY6jA" extendedCase="_e6WbsOXNEeySd_1a9cY6jA" extensionLocation="_0F7ooOXNEeySd_1a9cY6jA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_fVR7MOYwEeyJc4bj2cnJOg" name="PlayerEnterGame">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_w5yTwOYwEeyJc4bj2cnJOg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_t6zaIOYwEeyJc4bj2cnJOg" name="Spieler wählt einem Spielfeld">
+      <extend xmi:type="uml:Extend" xmi:id="_w5tbQOYwEeyJc4bj2cnJOg" extendedCase="_fVR7MOYwEeyJc4bj2cnJOg" extensionLocation="_w5yTwOYwEeyJc4bj2cnJOg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_AXEhIOYxEeyJc4bj2cnJOg" name="PlayerMakeAMove"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jZGe8OXNEeySd_1a9cY6jA" memberEnd="_jZHtEuXNEeySd_1a9cY6jA _jZIUIOXNEeySd_1a9cY6jA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZHtEOXNEeySd_1a9cY6jA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZHtEeXNEeySd_1a9cY6jA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jZHtEuXNEeySd_1a9cY6jA" name="playerstartgame" type="_e6WbsOXNEeySd_1a9cY6jA" association="_jZGe8OXNEeySd_1a9cY6jA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jZIUIOXNEeySd_1a9cY6jA" name="player" type="_XgLJIOXNEeySd_1a9cY6jA" association="_jZGe8OXNEeySd_1a9cY6jA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_V9sNQOXOEeySd_1a9cY6jA" name="Main">
+    <packagedElement xmi:type="uml:Package" xmi:id="_E2z-IOXJEeySd_1a9cY6jA" name="GameEnging">
+      <packagedElement xmi:type="uml:Package" xmi:id="_AjSTcOXJEeySd_1a9cY6jA" name="Player"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_UxCmMOXJEeySd_1a9cY6jA" name="GameControlUnit">
+        <packagedElement xmi:type="uml:Package" xmi:id="_6-6aAOXKEeySd_1a9cY6jA" name="ShellControlUnit"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_-4O_gOXLEeySd_1a9cY6jA" name="DataCollector"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Plb8oOXMEeySd_1a9cY6jA" name="GameExecuter">
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_Hg_6MOXOEeySd_1a9cY6jA" name="calls" client="_Plb8oOXMEeySd_1a9cY6jA" supplier="_JnPVUOXLEeySd_1a9cY6jA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_KVpMEOXOEeySd_1a9cY6jA" name="calls" client="_Plb8oOXMEeySd_1a9cY6jA" supplier="_EZXiQOXLEeySd_1a9cY6jA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_DDMrcOXJEeySd_1a9cY6jA" name="Location"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_h6UUIOXKEeySd_1a9cY6jA" name="Administration">
+      <packagedElement xmi:type="uml:Package" xmi:id="_EZXiQOXLEeySd_1a9cY6jA" name="PlayerAdministration"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_JnPVUOXLEeySd_1a9cY6jA" name="GameAdministration">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_i3Ea0OXLEeySd_1a9cY6jA" name="GameDep1" client="_JnPVUOXLEeySd_1a9cY6jA" supplier="_vgYhMOXKEeySd_1a9cY6jA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jDFTAOXKEeySd_1a9cY6jA" name="DataStorage">
+      <packagedElement xmi:type="uml:Package" xmi:id="_w7WDUOXKEeySd_1a9cY6jA" name="AdminstrationStorage"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_vgYhMOXKEeySd_1a9cY6jA" name="GameStorage"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_n3t2UOYwEeyJc4bj2cnJOg" memberEnd="_n31LEOYwEeyJc4bj2cnJOg _n31yIOYwEeyJc4bj2cnJOg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n3yHwOYwEeyJc4bj2cnJOg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n3yu0OYwEeyJc4bj2cnJOg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_n31LEOYwEeyJc4bj2cnJOg" name="playerentergame" type="_fVR7MOYwEeyJc4bj2cnJOg" association="_n3t2UOYwEeyJc4bj2cnJOg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_n31yIOYwEeyJc4bj2cnJOg" type="_XgLJIOXNEeySd_1a9cY6jA" association="_n3t2UOYwEeyJc4bj2cnJOg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JSHJgOYxEeyJc4bj2cnJOg" memberEnd="_JSI-sOYxEeyJc4bj2cnJOg _JSJlwOYxEeyJc4bj2cnJOg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JSIXoOYxEeyJc4bj2cnJOg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JSIXoeYxEeyJc4bj2cnJOg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JSI-sOYxEeyJc4bj2cnJOg" name="playermakeamove" type="_AXEhIOYxEeyJc4bj2cnJOg" association="_JSHJgOYxEeyJc4bj2cnJOg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JSJlwOYxEeyJc4bj2cnJOg" type="_XgLJIOXNEeySd_1a9cY6jA" association="_JSHJgOYxEeyJc4bj2cnJOg"/>
+  </packagedElement>
+</uml:Model>
